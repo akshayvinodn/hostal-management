@@ -1,0 +1,19 @@
+<h1>student</h1>
+<div>
+<table border="1" style ="width: 100%">
+    <thead style="background-color: blue;">
+        <tr>
+            <th>Name</th><th>Department</th><th>Age</th><th>Place</th><th>College</th><th>action</th>
+        </tr>
+    </thead>
+    
+        {% for i in student %}
+        <tr>
+        <td>{{i.name}}</td><td>{{i.department}}</td><td>{{i.age}}</td><td>{{i.place}}</td><td>{{i.college}}</td><td><a href="{% url 'update' i.id %}">edit</a> <a href="">delete</a></td>
+        </tr>
+        {% endfor %}
+    
+</table>
+<a href="{% url 'mexico' %}"> add student </a>
+
+</div>

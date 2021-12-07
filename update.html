@@ -1,0 +1,23 @@
+<form action="{% url 'update' id %}" method="POST">
+{% csrf_token %}
+    <table>
+        <tr>
+          <td>Name</td><td><input type="text" value='{{name}}' name="name"></td>
+        </tr>
+        <tr>
+            <td>Department</td><td><input type="text" value='{{dept}}' name="dept"></td>
+        </tr>
+        <tr>
+        <td>Age</td><td><input type="number" value="{{age}}" name="age"></td>
+        </tr>
+        <tr>
+            <td>place</td><td><input type="text" value="{{place}}" name="place"></td>
+        </tr>
+        <tr>
+            <td>College</td><td><input type="text" value="{{college}}"  name="college"></td>
+        </tr>
+        <tr>
+            <td></td><td><input type="submit"></td>
+        </tr>
+    </table>
+</form>
